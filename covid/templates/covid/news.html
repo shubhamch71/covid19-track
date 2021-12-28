@@ -1,0 +1,25 @@
+{% extends 'covid/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="card-columns">
+            {% for n in news.articles %}
+            <div class="col col-md my-2">
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top" src="{{n.urlToImage}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{n.title}}</h5>
+                        <p class="card-text">{{n.description|truncatechars:100}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{n.url}}" class="btn btn-primary">Read more</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
