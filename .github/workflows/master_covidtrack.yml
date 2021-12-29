@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'covidtrack'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_253D4400DC3A4672AF10255AB57BED68 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B7D16764D588444A93C514CAE4E10ACA }}
